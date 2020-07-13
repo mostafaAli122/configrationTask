@@ -1,0 +1,11 @@
+H:\EFG_HERMES_Task\Configration.Domain\bin\Debug\Configration.Domain.dll.config
+H:\EFG_HERMES_Task\Configration.Domain\bin\Debug\Configration.Domain.dll
+H:\EFG_HERMES_Task\Configration.Domain\bin\Debug\Configration.Domain.pdb
+H:\EFG_HERMES_Task\Configration.Domain\bin\Debug\EntityFramework.dll
+H:\EFG_HERMES_Task\Configration.Domain\bin\Debug\EntityFramework.SqlServer.dll
+H:\EFG_HERMES_Task\Configration.Domain\bin\Debug\EntityFramework.xml
+H:\EFG_HERMES_Task\Configration.Domain\bin\Debug\EntityFramework.SqlServer.xml
+H:\EFG_HERMES_Task\Configration.Domain\obj\Debug\Configration.Domain.csprojAssemblyReference.cache
+H:\EFG_HERMES_Task\Configration.Domain\obj\Debug\Configration.Domain.csproj.CopyComplete
+H:\EFG_HERMES_Task\Configration.Domain\obj\Debug\Configration.Domain.dll
+H:\EFG_HERMES_Task\Configration.Domain\obj\Debug\Configration.Domain.pdb

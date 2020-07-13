@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ConfigrationService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="default_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <msf:WindowsTransportSecurity xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy">
+                  <msf:ProtectionLevel>EncryptAndSign</msf:ProtectionLevel>
+                </msf:WindowsTransportSecurity>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:9698/ConfigrationService/Meta?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:9698/ConfigrationService/Meta?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:9698/ConfigrationService/Meta?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Configration.Domain.Entities" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IConfigrationService_GetAllStudents_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllStudents" />
+  </wsdl:message>
+  <wsdl:message name="IConfigrationService_GetAllStudents_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllStudentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConfigrationService_GetAllInstructors_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllInstructors" />
+  </wsdl:message>
+  <wsdl:message name="IConfigrationService_GetAllInstructors_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllInstructorsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConfigrationService_GetAllITIBranches_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllITIBranches" />
+  </wsdl:message>
+  <wsdl:message name="IConfigrationService_GetAllITIBranches_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllITIBranchesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConfigrationService_GetAllBranchesConfigKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllBranchesConfigKeys" />
+  </wsdl:message>
+  <wsdl:message name="IConfigrationService_GetAllBranchesConfigKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllBranchesConfigKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConfigrationService_GetAllStudentsConfigKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllStudentsConfigKeys" />
+  </wsdl:message>
+  <wsdl:message name="IConfigrationService_GetAllStudentsConfigKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllStudentsConfigKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConfigrationService_GetAllInstructorsConfigKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllInstructorsConfigKeys" />
+  </wsdl:message>
+  <wsdl:message name="IConfigrationService_GetAllInstructorsConfigKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllInstructorsConfigKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConfigrationService_GetITIBranchConfigValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetITIBranchConfigValue" />
+  </wsdl:message>
+  <wsdl:message name="IConfigrationService_GetITIBranchConfigValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetITIBranchConfigValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConfigrationService_GetInstructorConfigValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInstructorConfigValue" />
+  </wsdl:message>
+  <wsdl:message name="IConfigrationService_GetInstructorConfigValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInstructorConfigValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConfigrationService_GetStudentConfigValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStudentConfigValue" />
+  </wsdl:message>
+  <wsdl:message name="IConfigrationService_GetStudentConfigValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStudentConfigValueResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IConfigrationService">
+    <wsdl:operation name="GetAllStudents">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConfigrationService/GetAllStudents" message="tns:IConfigrationService_GetAllStudents_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConfigrationService/GetAllStudentsResponse" message="tns:IConfigrationService_GetAllStudents_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllInstructors">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConfigrationService/GetAllInstructors" message="tns:IConfigrationService_GetAllInstructors_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConfigrationService/GetAllInstructorsResponse" message="tns:IConfigrationService_GetAllInstructors_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllITIBranches">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConfigrationService/GetAllITIBranches" message="tns:IConfigrationService_GetAllITIBranches_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConfigrationService/GetAllITIBranchesResponse" message="tns:IConfigrationService_GetAllITIBranches_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllBranchesConfigKeys">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConfigrationService/GetAllBranchesConfigKeys" message="tns:IConfigrationService_GetAllBranchesConfigKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConfigrationService/GetAllBranchesConfigKeysResponse" message="tns:IConfigrationService_GetAllBranchesConfigKeys_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllStudentsConfigKeys">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConfigrationService/GetAllStudentsConfigKeys" message="tns:IConfigrationService_GetAllStudentsConfigKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConfigrationService/GetAllStudentsConfigKeysResponse" message="tns:IConfigrationService_GetAllStudentsConfigKeys_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllInstructorsConfigKeys">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConfigrationService/GetAllInstructorsConfigKeys" message="tns:IConfigrationService_GetAllInstructorsConfigKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConfigrationService/GetAllInstructorsConfigKeysResponse" message="tns:IConfigrationService_GetAllInstructorsConfigKeys_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetITIBranchConfigValue">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConfigrationService/GetITIBranchConfigValue" message="tns:IConfigrationService_GetITIBranchConfigValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConfigrationService/GetITIBranchConfigValueResponse" message="tns:IConfigrationService_GetITIBranchConfigValue_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInstructorConfigValue">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConfigrationService/GetInstructorConfigValue" message="tns:IConfigrationService_GetInstructorConfigValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConfigrationService/GetInstructorConfigValueResponse" message="tns:IConfigrationService_GetInstructorConfigValue_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStudentConfigValue">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConfigrationService/GetStudentConfigValue" message="tns:IConfigrationService_GetStudentConfigValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConfigrationService/GetStudentConfigValueResponse" message="tns:IConfigrationService_GetStudentConfigValue_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="default" type="tns:IConfigrationService">
+    <wsp:PolicyReference URI="#default_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="GetAllStudents">
+      <soap12:operation soapAction="http://tempuri.org/IConfigrationService/GetAllStudents" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllInstructors">
+      <soap12:operation soapAction="http://tempuri.org/IConfigrationService/GetAllInstructors" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllITIBranches">
+      <soap12:operation soapAction="http://tempuri.org/IConfigrationService/GetAllITIBranches" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllBranchesConfigKeys">
+      <soap12:operation soapAction="http://tempuri.org/IConfigrationService/GetAllBranchesConfigKeys" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllStudentsConfigKeys">
+      <soap12:operation soapAction="http://tempuri.org/IConfigrationService/GetAllStudentsConfigKeys" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllInstructorsConfigKeys">
+      <soap12:operation soapAction="http://tempuri.org/IConfigrationService/GetAllInstructorsConfigKeys" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetITIBranchConfigValue">
+      <soap12:operation soapAction="http://tempuri.org/IConfigrationService/GetITIBranchConfigValue" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInstructorConfigValue">
+      <soap12:operation soapAction="http://tempuri.org/IConfigrationService/GetInstructorConfigValue" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStudentConfigValue">
+      <soap12:operation soapAction="http://tempuri.org/IConfigrationService/GetStudentConfigValue" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ConfigrationService">
+    <wsdl:port name="default" binding="tns:default">
+      <soap12:address location="net.tcp://localhost:9690/ConfigrationService" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://localhost:9690/ConfigrationService</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Upn>DESKTOP-18N0FVN\Moustafa</Upn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

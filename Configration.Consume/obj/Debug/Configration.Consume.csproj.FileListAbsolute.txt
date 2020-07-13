@@ -1,0 +1,9 @@
+H:\EFG_HERMES_Task\Configration.Consume\bin\Debug\Configration.Consume.exe.config
+H:\EFG_HERMES_Task\Configration.Consume\bin\Debug\Configration.Consume.exe
+H:\EFG_HERMES_Task\Configration.Consume\bin\Debug\Configration.Consume.pdb
+H:\EFG_HERMES_Task\Configration.Consume\obj\Debug\Configration.Consume.csprojAssemblyReference.cache
+H:\EFG_HERMES_Task\Configration.Consume\obj\Debug\Configration.Consume.Properties.Resources.resources
+H:\EFG_HERMES_Task\Configration.Consume\obj\Debug\Configration.Consume.csproj.GenerateResource.cache
+H:\EFG_HERMES_Task\Configration.Consume\obj\Debug\Configration.Consume.exe
+H:\EFG_HERMES_Task\Configration.Consume\obj\Debug\Configration.Consume.pdb
+H:\EFG_HERMES_Task\Configration.Consume\obj\Debug\Configration.Consume.ConfigrationTask.resources
